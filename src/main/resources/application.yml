@@ -1,0 +1,25 @@
+spring:
+    profiles: test
+name: test-YAML
+environment: test
+ 
+---
+spring:
+  profiles: dev
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: A@ssw0rd
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+name: dev-YAML
+environment: dev
+ 
+---
+spring:
+    profiles: prod
+name: prod-YAML
+environment: production

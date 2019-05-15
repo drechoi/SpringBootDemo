@@ -31,7 +31,7 @@ public class DummyRepositoryTest {
 	
 	@Test
 	public void ableToSaveDummyToDB(){
-		Dummy dummy1 = new Dummy("D1");
+		Dummy dummy1 = Dummy.builder().name("D1").build();
 		dummyRepository.save(dummy1);
 		
 		long itemCount = dummyRepository.count();		
